@@ -17,7 +17,7 @@ class InvoiceFactory extends Factory
      */
     public function definition(): array
     {
-        $status = fake()->randomElement(['B', 'p', 'V']);
+        $status = fake()->randomElement(['B', 'P', 'V']);
         return [
             'customer_id' => Customer::factory(),
             'amount' => fake()->numberBetween(100.20000),
