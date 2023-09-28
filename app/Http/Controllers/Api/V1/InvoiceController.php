@@ -7,8 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\V1\InvoiceCollection;
 use App\Http\Resources\V1\InvoiceResource;
 use App\Models\Invoice;
-use App\Http\Requests\StoreInvoiceRequest;
-use App\Http\Requests\UpdateInvoiceRequest;
+use App\Http\Requests\V1\StoreInvoiceRequest;
+use App\Http\Requests\V1\UpdateInvoiceRequest;
 use Illuminate\Http\Request;
 
 class InvoiceController extends Controller
@@ -30,14 +30,6 @@ class InvoiceController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(StoreInvoiceRequest $request)
@@ -51,14 +43,6 @@ class InvoiceController extends Controller
     public function show(Invoice $invoice)
     {
         return new InvoiceResource($invoice);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Invoice $invoice)
-    {
-        //
     }
 
     /**
