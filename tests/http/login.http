@@ -1,0 +1,12 @@
+@BASE_URL = http://localhost:8000
+
+###
+GET {{BASE_URL}}/setup HTTP/1.1
+Accept: "application/json"
+
+# Returned Tokens
+{
+  "admin": "1|pkSyZ7iQcAQgr1NSYrRkE16vdckuy3e4BT5mL5LU355696b1",
+  "update": "2|oebuazbf0XX7F8bn6AmFMClbQLnovuLRcJOXuoby71d01d80",
+  "basic": "3|qIYJBPfdYT2JK7M7xEJ9sYSqfNTEfhkac0FjdNZM24fbf6e4"
+}

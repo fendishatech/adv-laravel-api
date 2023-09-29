@@ -59,7 +59,11 @@ class CustomerController extends Controller
      */
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
-        $customer->update($request->all());
+        if ($customer->update($request->all())) {
+            return response()->json([
+                "message" => "Customer Updated Successfully"
+            ]);
+        }
     }
 
     /**

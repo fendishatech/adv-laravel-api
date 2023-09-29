@@ -1,0 +1,49 @@
+@BASE_URL = http://localhost:8000/api/v1
+
+# THIS BASIC TOKEN CAN ONLY VIEW DATA, CAN NOT ADD, UPDATE OR DELETE
+
+###
+GET {{BASE_URL}}/customers/ HTTP/1.1
+Authorization: Bearer 3|qIYJBPfdYT2JK7M7xEJ9sYSqfNTEfhkac0FjdNZM24fbf6e4
+Accept: "application/json"
+
+
+# CREATE CUSTOMER RECORD
+###
+POST {{BASE_URL}}/customers HTTP/1.1
+Authorization: Bearer 3|qIYJBPfdYT2JK7M7xEJ9sYSqfNTEfhkac0FjdNZM24fbf6e4
+Accept: "application/json"
+Content-Type: "application/json"
+
+{
+ "name" : "GUstavo FRing",
+"type" : "i",
+"email" : "pollos@gmail.com",
+"address" : "New mexico ",
+"city" : "New Mexico",
+"state" : "Wyoming",
+"postalCode" : "41768"
+}
+
+###
+GET {{BASE_URL}}/customers/235 HTTP/1.1
+Authorization: Bearer 3|qIYJBPfdYT2JK7M7xEJ9sYSqfNTEfhkac0FjdNZM24fbf6e4
+Accept: "application/json"
+
+
+# UPDATE CUTOMER RECORD
+###
+PATCH {{BASE_URL}}/customers/236 HTTP/1.1
+Authorization: Bearer 3|qIYJBPfdYT2JK7M7xEJ9sYSqfNTEfhkac0FjdNZM24fbf6e4
+Accept: "application/json"
+Content-Type: "application/json"
+
+{
+ "name" : "Gustavo Fring",
+"type" : "i",
+"email" : "pollos@gmail.com",
+"address" : "New mexico ",
+"city" : "New Mexico",
+"state" : "Wyoming",
+"postalCode" : "41768"
+}

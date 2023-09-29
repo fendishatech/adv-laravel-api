@@ -1,0 +1,23 @@
+@BASE_URL = http://localhost:8000/api/v1
+
+###
+POST {{BASE_URL}}/invoices/bulkStore HTTP/1.1
+Accept: "application/json"
+Content-Type: "application/json"
+
+[
+    {
+       "customerId" : 1,
+        "amount"  : 8000,
+        "status" : "P",
+        "billedDate" : "2021-04-23 14:29:49",
+        "paidDate" : null
+    },
+    {
+        "customerId" : 1,
+        "amount"  : 16000,
+        "status" : "V",
+        "billedDate" : "2021-04-23 14:29:49",
+        "paidDate" : "2021-05-10 02:29:49"
+    }
+]
